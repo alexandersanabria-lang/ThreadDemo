@@ -22,7 +22,7 @@ fun ConHiloScreen(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("✅ Caso 2 — Con Hilo Thread", color = Color.White) },
+                title = { Text("Caso 2 — Con Hilo Thread", color = Color.White) },
                 navigationIcon = {
                     TextButton(onClick = { navController.popBackStack() }) {
                         Text("← Volver", color = Color(0xFF6C63FF))
@@ -82,22 +82,22 @@ fun ConHiloScreen(navController: NavController) {
             // Botón
             Button(
                 onClick = {
-                    status = "✅ Trabajando en segundo plano...\nintenta tocar la pantalla"
+                    status = "Trabajando en segundo plano...\nintenta tocar la pantalla"
                     cargando = true
                     resultado = ""
                     Thread {
                         Thread.sleep(3000)
                         Handler(Looper.getMainLooper()).post {
                             cargando = false
-                            status = "✅ Thread terminó correctamente"
-                            resultado = "✅ ¿Pudiste tocar la pantalla durante la espera?\n\nSÍ. El trabajo se hizo en un hilo separado.\n\nSe usó Handler para volver al hilo principal y actualizar la UI."
+                            status = "Thread terminó correctamente"
+                            resultado = " ¿Pudiste tocar la pantalla durante la espera?\n\nSÍ. El trabajo se hizo en un hilo separado.\n\nSe usó Handler para volver al hilo principal y actualizar la UI."
                         }
                     }.start()
                 },
                 modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF27AE60))
             ) {
-                Text("✅ Ejecutar Con Hilo Thread", color = Color.White, fontSize = 15.sp)
+                Text(" Ejecutar Con Hilo Thread", color = Color.White, fontSize = 15.sp)
             }
 
             if (cargando) {

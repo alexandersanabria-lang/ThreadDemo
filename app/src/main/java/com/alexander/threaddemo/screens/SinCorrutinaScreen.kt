@@ -77,7 +77,7 @@ fun SinCorrutinaScreen(navController: NavController) {
                             "            }\n" +
                             "        }.start()\n" +
                             "    }\n" +
-                            "}.start() // 😵 Callback Hell",
+                            "}.start() // Callback Hell",
                     modifier = Modifier.padding(16.dp),
                     color = Color(0xFFE5C07B),
                     fontSize = 12.sp,
@@ -95,20 +95,20 @@ fun SinCorrutinaScreen(navController: NavController) {
                     Thread {
                         Thread.sleep(1500)
                         handler.post {
-                            status = "⚙️ Paso 2: procesando datos..."
+                            status = "Paso 2: procesando datos..."
                             Thread {
                                 Thread.sleep(1500)
                                 handler.post {
-                                    status = "⚙️ Paso 3: guardando resultados..."
+                                    status = "Paso 3: guardando resultados..."
                                     Thread {
                                         Thread.sleep(1000)
                                         handler.post {
                                             cargando = false
-                                            status = "✅ Completado con Handlers"
-                                            resultado = "⚠️ Funcionó pero mira el código.\n\n" +
+                                            status = "Completado con Handlers"
+                                            resultado = "Funcionó pero mira el código.\n\n" +
                                                     "3 pasos = 3 niveles de callbacks anidados.\n\n" +
                                                     "Imagina 10 pasos... ¡imposible de mantener!\n\n" +
-                                                    "A esto se le llama 'Callback Hell'. 😵"
+                                                    "A esto se le llama 'Callback Hell'. "
                                         }
                                     }.start()
                                 }

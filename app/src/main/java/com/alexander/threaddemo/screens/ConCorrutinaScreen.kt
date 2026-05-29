@@ -25,7 +25,7 @@ fun ConCorrutinaScreen(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("🚀 Caso 4 — Corrutina + Retrofit", color = Color.White) },
+                title = { Text("Caso 4 — Corrutina + Retrofit", color = Color.White) },
                 navigationIcon = {
                     TextButton(onClick = { navController.popBackStack() }) {
                         Text("← Volver", color = Color(0xFF6C63FF))
@@ -82,7 +82,7 @@ fun ConCorrutinaScreen(navController: NavController) {
                             "    }\n" +
                             "    // paso 3 — Retrofit\n" +
                             "    val post = RetrofitClient.api.getPost(1)\n" +
-                            "    // actualiza UI directo ✅\n" +
+                            "    // actualiza UI directo \n" +
                             "}",
                     modifier = Modifier.padding(16.dp),
                     color = Color(0xFF61AFEF),
@@ -94,18 +94,18 @@ fun ConCorrutinaScreen(navController: NavController) {
             // Botón
             Button(
                 onClick = {
-                    status = "🚀 Paso 1: descargando datos..."
+                    status = "Paso 1: descargando datos..."
                     cargando = true
                     resultado = ""
                     scope.launch {
                         try {
                             // Paso 1
                             withContext(Dispatchers.IO) { delay(1500) }
-                            status = "🚀 Paso 2: procesando datos..."
+                            status = "Paso 2: procesando datos..."
 
                             // Paso 2
                             withContext(Dispatchers.IO) { delay(1500) }
-                            status = "🚀 Paso 3: llamando a la API con Retrofit..."
+                            status = "Paso 3: llamando a la API con Retrofit..."
 
                             // Paso 3 — llamada real a internet
                             val post = withContext(Dispatchers.IO) {
@@ -113,17 +113,17 @@ fun ConCorrutinaScreen(navController: NavController) {
                             }
 
                             cargando = false
-                            status = "✅ Corrutina + Retrofit completado"
-                            resultado = "✅ Datos reales de la API:\n\n" +
+                            status = "Corrutina + Retrofit completado"
+                            resultado = "Datos reales de la API:\n\n" +
                                     "🔹 ID: ${post.id}\n" +
                                     "🔹 UserID: ${post.userId}\n" +
                                     "🔹 Título: ${post.title}\n\n" +
                                     "🔹 Cuerpo:\n${post.body}\n\n" +
-                                    "✅ Código limpio, lineal y fácil de leer.\n" +
+                                    "Código limpio, lineal y fácil de leer.\n" +
                                     "¡Esta es la forma moderna en Kotlin!"
                         } catch (e: Exception) {
                             cargando = false
-                            status = "❌ Error de conexión"
+                            status = "Error de conexión"
                             resultado = "Error: ${e.message}\n\nVerifica que el emulador\ntiene acceso a internet."
                         }
                     }
@@ -131,7 +131,7 @@ fun ConCorrutinaScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2980B9))
             ) {
-                Text("🚀 Ejecutar Corrutina + Retrofit", color = Color.White, fontSize = 15.sp)
+                Text("Ejecutar Corrutina + Retrofit", color = Color.White, fontSize = 15.sp)
             }
 
             if (cargando) {

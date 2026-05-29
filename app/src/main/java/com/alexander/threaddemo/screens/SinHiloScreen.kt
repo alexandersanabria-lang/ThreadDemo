@@ -20,7 +20,7 @@ fun SinHiloScreen(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("❌ Caso 1 — Sin Hilo", color = Color.White) },
+                title = { Text(" Caso 1 — Sin Hilo", color = Color.White) },
                 navigationIcon = {
                     TextButton(onClick = { navController.popBackStack() }) {
                         Text("← Volver", color = Color(0xFF6C63FF))
@@ -64,7 +64,7 @@ fun SinHiloScreen(navController: NavController) {
                 shape = MaterialTheme.shapes.medium
             ) {
                 Text(
-                    text = "// ❌ Bloquea el hilo principal\nThread.sleep(3000)",
+                    text = "// Bloquea el hilo principal\nThread.sleep(3000)",
                     modifier = Modifier.padding(16.dp),
                     color = Color(0xFFE06C75),
                     fontSize = 13.sp,
@@ -75,18 +75,18 @@ fun SinHiloScreen(navController: NavController) {
             // Botón
             Button(
                 onClick = {
-                    status = "⚠️ Ejecutando... intenta tocar la pantalla"
+                    status = "Ejecutando... intenta tocar la pantalla"
                     cargando = true
                     resultado = ""
-                    Thread.sleep(3000) // ❌ Congela todo
+                    Thread.sleep(3000) // Congela todo
                     cargando = false
-                    status = "✅ Terminó después de 3 segundos"
-                    resultado = "❌ ¿Pudiste tocar algo durante la espera?\n\nNO. La UI estuvo completamente congelada.\n\nEsto puede causar un ANR (App Not Responding)."
+                    status = "Terminó después de 3 segundos"
+                    resultado = " ¿Pudiste tocar algo durante la espera?\n\nNO. La UI estuvo completamente congelada.\n\nEsto puede causar un ANR (App Not Responding)."
                 },
                 modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFC0392B))
             ) {
-                Text("❌ Ejecutar Sin Hilo", color = Color.White, fontSize = 15.sp)
+                Text(" Ejecutar Sin Hilo", color = Color.White, fontSize = 15.sp)
             }
 
             if (cargando) {

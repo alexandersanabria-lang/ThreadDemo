@@ -37,7 +37,7 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth().height(60.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFC0392B))
             ) {
-                Text("❌  Caso 1 — Sin Hilo", fontSize = 16.sp, color = Color.White)
+                Text(" Caso 1 — Sin Hilo", fontSize = 16.sp, color = Color.White)
             }
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -48,7 +48,7 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth().height(60.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF27AE60))
             ) {
-                Text("✅  Caso 2 — Con Hilo Thread", fontSize = 16.sp, color = Color.White)
+                Text(" Caso 2 — Con Hilo Thread", fontSize = 16.sp, color = Color.White)
             }
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -59,7 +59,7 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth().height(60.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE67E22))
             ) {
-                Text("⚙️  Caso 3 — Sin Corrutina", fontSize = 16.sp, color = Color.White)
+                Text(" Caso 3 — Sin Corrutina", fontSize = 16.sp, color = Color.White)
             }
 
             Spacer(modifier = Modifier.height(12.dp))
@@ -70,7 +70,7 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth().height(60.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2980B9))
             ) {
-                Text("🚀  Caso 4 — Corrutina + Retrofit", fontSize = 16.sp, color = Color.White)
+                Text("Caso 4 — Corrutina + Retrofit", fontSize = 16.sp, color = Color.White)
             }
         }
     }
